@@ -10,7 +10,7 @@ app.use(cors())
 dotEnv.config()
 
 
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect("mongodb+srv://mohan8985320915:abcd1234@cluster0.5vdba.mongodb.net/employee");
 
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
@@ -40,4 +40,3 @@ app.listen(5000, () => {
     console.log("Running on port 5000.");
 });
 
-module.exports = app;
